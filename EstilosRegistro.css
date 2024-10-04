@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#Fondo-Portada {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    max-width: 310px;
+    border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: "#fff";
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -5px;
+}
+
+
+.inputbox input {
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: rgb(255, 255, 255, 1);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+button:hover {
+    background-color: rgba(19, 141, 235, 0.5);
+}
+
+/* Ajustes de CSS para el formulario */
+.registro {
+    display: grid;
+    max-width: 100%;
+    padding: 2rem 3rem;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(55px);
+}
+
+/* Cada fieldset ocupará su lugar en la grid */
+.registro .tipo {
+    border: 1px solid transparent;
+    border-color: black;
+    padding: 15px;
+    border-radius: 5px;
+    /* Asegúrate que el ancho sea controlado */
+    width: 100%;
+    /* Asegura que el fieldset tome todo el ancho de la columna */
+}
+
+
+
+.seccion {
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+
+.scrollable-content {
+    max-height: 500px;
+    overflow-y:auto;
+    padding-right: 5px;
+}
+
+.scrollable-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+    background: #0f07ef;
+}
+.valido { 
+    color: green; 
+}
+.invalido { 
+    color: red; 
+}

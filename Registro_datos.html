@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Datos_ITH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referre">
+    <Link rel="stylesheet" href="EstilosRegistro.css">
+    </Link>
+</head>
+
+<body>
+    <div>
+        <img id="Fondo-Portada" src="imagenes/ITHfondo.jpg" alt="">
+    </div>
+
+    <section class="registro">
+        <div class="scrollable-content">
+            <form method="post" id="registroForm" onsubmit="return validarFormulario() ">
+                <h1>Registro de Datos</h1>
+
+                <fieldset class="tipo">
+                    <legend class="seccion">Información Personal</legend>
+
+                    <div class="inputbox">
+                        <input type="text" name="nombre" required>
+                        <label for="nombre"> Nombre</label>
+                    </div>
+
+                    <div class="inputbox">
+                        <input type="text" name="App" required>
+                        <label for="App"> Apellido Paterno</label>
+                    </div>
+
+                    <div class="inputbox">
+                        <input type="text" name="Apm" required>
+                        <label for="Apm"> Apellido Materno</label>
+                    </div>
+
+                    <div class="inputbox">
+                        <input type="date" name="FNacimiento" required>
+                        <label for="FNacimiento"> Fecha de Nacimiento</label>
+                    </div>
+
+                    <div class="inputboxed">
+                        <label for=""> Sexo</label>
+                        <br><br>
+                        <input type="radio" name="sexo" value="hombre" required> Hombre
+                        <input type="radio" name="sexo" value="Mujer" required> Mujer
+                    </div>
+                </fieldset>
+
+                <fieldset class="tipo">
+                    <legend class="seccion">Informacion Escolar</legend>
+
+                    <div class="inputbox">
+                        <input type="text" id="NControl" name="NControl" required>
+                        <label for="NControl"> Numero de Control </label>
+                        <div id="mensaje"></div>
+                    </div>
+
+                    <div class="inputbox">
+                        <input type="text" name="Carrera" required>
+                        <label for="Carrera"> Carrera </label>
+                    </div>
+
+                    <div class="inputbox">
+                        <input type="text" name="Pingreso" required>
+                        <label for="PIngreso"> Periodo de Ingreso </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="tipo">
+                    <legend class="seccion">Información de Contacto</legend>
+
+                    <div class="inputbox">
+                        <input type="tel" name="telefono" required>
+                        <label for="telefono"> Telefono</label>
+                    </div>
+
+                    <div class="inputbox">
+                        <input type="email" name="correo" required>
+                        <label for="Correo"> Correo Electronico</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="tipo">
+                    <legend class="seccion">Información Adicional</legend>
+
+                    <div class="inputboxed">
+                        <label for="comentario">Comentarios:</label>
+                        <br><br>
+                        <textarea id="comentario" name="comentario" rows="4" cols="40"
+                            placeholder="Escriba su mensaje aquí"></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Registrar</button>
+            </form>
+            
+        </div>
+    </section>
+    <script src="js.js"></script>
+
+</body>
+
+</html>
